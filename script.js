@@ -24,7 +24,7 @@ function savePosture() {
   const ctx = canvas.getContext('2d');
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-  // Convert the canvas image to grayscale using OpenCV
+  // Convert the canvas image to grayscale
   const img = cv.imread(canvas);
   goodPostureImg = new cv.Mat();
   cv.cvtColor(img, goodPostureImg, cv.COLOR_BGR2GRAY);
